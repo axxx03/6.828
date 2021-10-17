@@ -25,16 +25,19 @@ i386_init(void)
 	// Initialize the console.
 	// Can't call cprintf until after we do this!
 	cons_init();
-
+	cprintf("===================Lab1 start===================\n\n");
 	cprintf("6828 decimal is %o octal!\n", 6828);
-
+	cprintf("\n====================Lab1 end====================\n");
 	// Lab 2 memory management initialization functions
+	cprintf("===================Lab2 start===================\n\n");
 	mem_init();
-
+	cprintf("\n====================Lab2 end====================\n");
 	// Lab 3 user environment initialization functions
+	/*
+	cprintf("===================Lab3 start===================\n\n");
 	env_init();
 	trap_init();
-
+	
 #if defined(TEST)
 	// Don't touch -- used by grading script!
 	ENV_CREATE(TEST, ENV_TYPE_USER);
@@ -45,6 +48,7 @@ i386_init(void)
 
 	// We only have one user environment for now, so just run it.
 	env_run(&envs[0]);
+	cprintf("\n====================Lab3 end====================\n");*/
 }
 
 
